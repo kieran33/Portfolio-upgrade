@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    margin: 200px 0 0 0;
+    letter-spacing: 2px;
+}
+
+a {
+    text-decoration: none ;
+  }
+   /* Décalage pour les ancres */
+   #presentation,
+    #competences,
+    #experiences {
+        scroll-margin-top: 180px;
+    }
+    #formations, #contact{
+        scroll-margin-top: 165px;
+    }
+    #projets{
+        scroll-margin-top: 280px;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+  /* Barre de navigation */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Assure qu'elle reste au-dessus du contenu */
+    padding: 50px;
+  }
+  .navbar-nav {
+    margin: 0 auto;
+  }
+  .nav-link {
+    position: relative;
+    font-size: 1.4rem;
+    color: black;
+    margin: 0 20px;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #000;
+    transition: width 0.3s;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  /* Effet lien actif */
+.nav-link.active::after {
+    width: 100%;
+  }
+  /* Présentation */
+  #presentation{
+    margin-top: 100px;
+  }
+  .profile-img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .profile-img:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Compétences */
+  #competences h5{
+    font-size: 1.4rem;
+    white-space: nowrap;
+  }
+  .skill-flip {
+    width: 100px;
+    height: 100px;
+    perspective: 800px;
+    margin: 10px 0;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .skill-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .skill-flip:hover .skill-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .skill-front,
+  .skill-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  
+  /* Face avant : image ou icône */
+  .skill-front img,
+  .skill-front i {
+    width: 80px;
+    height: 80px;
+    font-size: 80px;
+  }
+  
+  /* Face arrière : texte */
+  .skill-back {
+    transform: rotateY(180deg);
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+
+  .col-md-2 {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Expériences */
+  #experiences h3{
+    white-space: nowrap;
+  }
+  
+  .timeline-logo {
+width: 100px;
+height: 100px;
+object-fit: contain;
+flex-shrink: 0;
+}
+
+.timeline {
+border-left: 3px solid #0d6efd;
+margin-left: 20px;
+padding-left: 30px;
+}
+
+.timeline-item {
+position: relative;
+margin-bottom: 40px;
+}
+
+.timeline-icon {
+position: absolute;
+left: -50px;
+top: 0;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 18px;
+box-shadow: 0 0 0 4px #fff, 0 0 0 6px #0d6efd;
+}
+
+.timeline-content {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+cursor: pointer;
+}
+
+.timeline-content:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+  .image-projet{
+    width: 100%;  /* ou ajustez selon vos besoins */
+    height: 250px;  /* ajustez la hauteur comme nécessaire */
+    object-fit: cover;  /* Cela permet de garder la proportion de l'image */
+    object-position: top;  /* Vous pouvez ajuster cette valeur pour déplacer l'image */
+  }
+
+  #projets{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 0 25px;
+  }
+
+  .icon-hover {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .icon-hover:hover {
+    transform: scale(1.2);
+  }
+
+  .text-purple {
+  color: #6f42c1; /* Violet Bootstrap (Bootstrap's primary purple) */
+}
+
+.float-icon {
+  animation: float 3s ease-in-out infinite;
+  margin: 0 50px;
+}
+
+.float-icon:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
