@@ -9,16 +9,17 @@ a {
     text-decoration: none ;
   }
    /* Décalage pour les ancres */
-   #presentation,
-    #competences,
-    #experiences {
-        scroll-margin-top: 180px;
-    }
-    #formations, #contact{
-        scroll-margin-top: 165px;
-    }
+   #presentation{
+    scroll-margin-top: 200px;
+   }
+   #formations, #contact{
+    scroll-margin-top: 130px;
+   }
+   #competences, #experiences{
+    scroll-margin-top: 180px;
+   }
     #projets{
-        scroll-margin-top: 280px;
+      scroll-margin-top: 290px;
     }
     html {
         scroll-behavior: smooth;
@@ -37,7 +38,7 @@ a {
   }
   .nav-link {
     position: relative;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: black;
     margin: 0 20px;
   }
@@ -124,7 +125,7 @@ a {
   .skill-back {
     transform: rotateY(180deg);
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
 
   .col-md-2 {
