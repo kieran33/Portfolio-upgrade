@@ -238,7 +238,7 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 @media (max-width: 800px) {
 
   body{
-    margin: 0;
+    margin: 100 0 0 0;
   }
   .navbar-toggler {
     position: absolute;
@@ -267,7 +267,7 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   }
 
   .navbar {
-    padding: 20px;
+    padding: 50px;
   }
 }
 
