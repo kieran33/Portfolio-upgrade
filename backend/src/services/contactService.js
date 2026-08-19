@@ -22,3 +22,6 @@ async function submitContactMessage({ name, email, message }) {
 }
 
 module.exports = { submitContactMessage };
+
+
+
